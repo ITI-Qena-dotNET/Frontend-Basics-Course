@@ -1,0 +1,31 @@
+.center {
+    text-align: center;
+}
+
+.align-right {
+    float: right;
+}
+
+.icon-large {
+    font-size: 40px;
+}
+
+.color-aqua {
+    color: aqua;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-brown {
+    color: brown;
+}
+
+.bg-shade {
+    background-color: #D2C5C6;
+}
