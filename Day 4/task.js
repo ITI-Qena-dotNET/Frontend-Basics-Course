@@ -42,14 +42,13 @@ function basicMathOps() {
 // 4. Fill an array (5 numerical values) from the user, Sort it in descending and ascending orders then display the output
 function sortAndDisplay() {
     var arr = []
+    var copyArr = []
 
     for (var i = 0; i < 5; i++) {
         arr[i] = prompt(`Enter number ${i + 1}:`)
     }
 
-
-    var copyArr = []
-
+    // Copy to new arr
     for (let i = 0; i < arr.length; i++) {
         copyArr[i] = arr[i]
     }
@@ -106,7 +105,7 @@ function GetBirthday() {
         throw new Error('birthday format is not valid')
     }
 
-    document.write(`<p style="font-weight: bold;">Current Date: <p onerror="handleException()" style="font-weight: bold; color: ${colorsMap.get(colorKey)}">${new Date()}</p></p>`)
+    document.write(`<p style="font-weight: bold;">Current Date: <p style="font-weight: bold; color: ${colorsMap.get(colorKey)}">${new Date()}</p></p>`)
     console.log(birthdayInput)
     return birthdayInput
 }
