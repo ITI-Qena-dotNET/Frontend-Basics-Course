@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Task</title>
+</head>
+<body>
+    <!-- 
+        1- Create a login form that redirect to another page when user submit the form,
+        and put in this form textbox (user name) and password field (password) [textboxes must have name attribute] and button (login).
+        User name text has default text “Enter your user name here”, when user clicks login he will be redirected to another page
+        (the page given in the form action), use get method and on the other page get the user name (from the browser URL) 
+        and write on the page "welcome + User Name" in bold and big font letters.
+     -->
+    <div>
+        <form action="form.html">
+            <input type="text" name="username" placeholder="Enter your user name here" />
+            <input type="password" name="password" />
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+
+    <div>
+        <button onclick="showMessage()">Problem 2</button>
+        <a href="TextStyle.html">Problem 3</a>
+    </div>
+    
+    <div>
+        <img src="images/nature.bmp" width="100" height="100" onmouseenter="fadeOut(this)" onmouseleave="fadeIn(this)" />
+        <img src="images/nature.bmp" width="100" height="100" onmouseenter="fadeOut(this)" onmouseleave="fadeIn(this)" />
+        <img src="images/nature.bmp" width="100" height="100" onmouseenter="fadeOut(this)" onmouseleave="fadeIn(this)" />
+        <img src="images/nature.bmp" width="100" height="100" onmouseenter="fadeOut(this)" onmouseleave="fadeIn(this)" />
+    </div>
+
+    <span id="marbles" onmouseenter="stopMarbles()" onmouseleave="startMarbles()">
+        <img src="images/marble2.jpg" />
+        <img src="images/marble1.jpg" />
+        <img src="images/marble1.jpg" />
+        <img src="images/marble1.jpg" />
+        <img src="images/marble1.jpg" />
+    </span>
+
+    <script src="task.js"></script>
+</body>
+</html>

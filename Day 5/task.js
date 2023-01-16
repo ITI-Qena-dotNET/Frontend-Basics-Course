@@ -78,7 +78,7 @@ function checkInput(text, regexPattern) {
     return false
 }
 
-// Create an array of objects that hold student name along with his degree
+// 5- Create an array of objects that hold student name along with his degree
 // (Each element of the array is an object has 2 properties: Name and Degree).
 function students() {
     var studentsArr = [{ name: "Shady", Degree: 10 }, { name: "Ahmed", Degree: 50 }, { name: "Mohamed", Degree: 95 }]
