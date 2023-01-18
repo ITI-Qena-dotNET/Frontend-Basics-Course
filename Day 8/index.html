@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 Task</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="loginUser(event)">
+            <input id="username" type="text" placeholder="Enter Username" required />
+            <input id="password" type="password" placeholder="Enter password" required />
+            <!-- <label>Remember me?</label>
+            <input id="rememberme" type="checkbox" /> -->
+            <input type="submit" />
+        </form>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <form onsubmit="loginUserCheck(event)">
+            <input id="username" type="text" placeholder="Enter Username" required />
+            <input id="password" type="password" placeholder="Enter password" required />
+            <label>Remember me?</label>
+            <input id="rememberme" type="checkbox" />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <div>
+            <label>User ID</label>
+            <input id="userId" type="text" onblur="getUserData(this)" />
+        </div>
+        <div>
+            <label>Users</label>
+            <select id="usersDropdown" onchange="getUserDataFromSelect(this)">
+                <option disabled >-- Select User --</option>
+            </select>
+        </div>
+        <div style="margin-top: 20px;">
+            <label>First Name</label>
+            <input id="firstName" type="text" readonly />
+        </div>
+        <div>
+            <label>Last Name</label>
+            <input id="lastName" type="text" readonly />
+        </div>
+        <div style="margin-top: 10px;">
+            <img id="avatar" src="" width="200" height="200"/>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
