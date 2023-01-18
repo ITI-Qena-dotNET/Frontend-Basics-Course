@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 Task</title>
+</head>
+<body>
+    <a href="Calculator.html">Problem 1</a>
+
+    <div>
+        <button onclick="nextSlide()">Next</button>
+        <button onclick="startSlideshow()">Start Slideshow</button>
+        <button onclick="stopSlideshow()">Stop Slideshow</button>
+        <button onclick="previousSlide()">Previous</button>
+        <br />
+        <img id="imageFrame" src="images/1.jpg" width="200" height="200" />
+    </div>
+
+    <div>
+        <input type="text" onkeydown="customInputLogic(event)" />
+    </div>
+    <div>
+        <form style="margin-top: 20px;" action="formWelcome.html" onsubmit="">
+            <div>
+                <label for="fullname">Full Name</label>
+                <input name="fullname" type="text" onfocus="focusTextBox(this)" onblur="blurTextBox(this)"
+                    placeholder="Enter your name:" required />
+                <span id="errorFullName"></span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input name="email" type="email" required />
+            </div>
+            <div>
+                <label for="city">City</label>
+                <select name="city">
+                    <option disabled selected>-- Select City --</option>
+                    <option value="cairo">Cairo</option>
+                    <option value="Alex">Alex</option>
+                    <option value="Qena">Qena</option>
+                </select>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input id="pass" name="pass" type="password" required placeholder="Enter Password" />
+            </div>
+            <div>
+                <label for="reppassword">Repeat Password</label>
+                <input id="pass2" name="reppassword" type="password" onblur="blurPassword(this)" required
+                    placeholder="Enter Password again" />
+                <span id="errorPassword"></span>
+            </div>
+            <div>
+                <label for="accept">I accept the terms & conditions</label>
+                <input name="accept" type="checkbox" required />
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <form style="margin-top: 40px;" method="post" onsubmit="addNewRowToTable(event)">
+        <div>
+            <label>Name</label>
+            <input name="fullName" id="fullName" type="text" required />
+        </div>
+        <div>
+            <label>Age</label>
+            <input name="age" id="age" type="number" required />
+        </div>
+        <div>
+            <label>Email</label>
+            <input name="email" id="email" type="email" required />
+        </div>
+        <div>
+            <button type="submit">Add</button>
+            <button type="Reset">Reset</button>
+        </div>
+    </form>
+    <div style="margin-top: 20px; border: 10px;">
+        <table border="2">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+                <!-- Insert new rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>

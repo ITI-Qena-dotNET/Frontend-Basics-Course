@@ -106,7 +106,7 @@ function students() {
 
     console.log("Students after removing last one")
     for (var s of studentsArr) {
-        console.log(`Student Name: ${s["name"]} - Degree ${s.Degree}`);
+        console.log(`Student Name: ${s.name} - Degree ${s.Degree}`);
     }
 
     // e- Sort the array alphabetically based on the student name
