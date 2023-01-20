@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 Task</title>
+    <style>
+        .form-control {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .task-control {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-control">
+        <form>
+            <div class="form-control">
+                <label for="email">Enter Email</label>
+                <input id="email" type="email" placeholder="Email..." >
+            </div>
+            <div class="form-control">
+                <label for="password">Enter Password</label>
+                <input id="email" type="password" placeholder="password..." >
+            </div>
+            <div class="form-control">
+                <label for="favouriteColor">Select Favourite Color</label>
+                <input id="favouriteColor" type="color">
+            </div>
+            <div class="form-control">
+                <label for="DOB">Select Date of Birth</label>
+                <input id="DOB" type="date">
+            </div>
+            <div class="form-control">
+                <label for="governorates">Select Governorate</label>
+                <input id="governorates" list="governorates">
+                <datalist id="governorates">
+                    <option value="Cairo">
+                    <option value="Giza">
+                    <option value="Qena">
+                </datalist>
+            </div>
+            <div class="form-control">
+                <label for="phone">Enter Phone Number</label>
+                <input id="phone" type="tel">
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+    <div>
+        <a href="cv.html">Task 2</a>
+    </div>
+</body>
+</html>

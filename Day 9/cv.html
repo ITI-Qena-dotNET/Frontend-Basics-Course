@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        .header-style {
+            background-color: orange;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-skills {
+            float: left;
+            display: inline;
+            margin-left: 400px;
+            margin-right: 100px;
+        }
+
+        .other-info {
+            float: left;
+            display: block;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .bg-blue {
+            color: blue;
+        }
+
+        .bg-red {
+            color: red;
+        }
+
+        .size-md {
+            font-size: 1.5rem;
+        }
+
+        .bg-title {
+            background-color: orange;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-style">
+        <img src="images/avatar.png" width="150" height="150px">
+        <div class="float-right">
+            <h1>Andrew Hloom</h1>
+            <h3>Profession</h3>
+        </div>
+    </header>
+    <main style="display: flex;">
+        <aside class="info-skills">
+            <content>
+                <h2 onclick="togglemedia(document.getElementById('ring'))">Contact</h2>
+                <audio hidden id="ring">
+                    <source src="sounds/ring.mp3">
+                </audio>
+                <div>
+                    <i class="bi bi-house-door size-md"></i>
+                    <span>123 Park Avenue, Michigan, MI</span>
+                </div>
+                <div>
+                    <i class="bi bi-phone size-md"></i>
+                    <span>123 456 789</span>
+                </div>
+                <div>
+                    <i class="bi bi-phone size-md"></i>
+                    <span><time datetime="1999-08-16">16/8/1999</time></span>
+                </div>
+                <div>
+                    <i class="bi bi-envelope size-md"></i>
+                    <span>info@hloom.com</span>
+                </div>
+                <div>
+                    <i class="bi bi-link size-md"></i>
+                    <span>www.hloom.com</span>
+                </div>
+            </content>
+            <content>
+                <h2>Languages</h2>
+                <div>
+                    <h4>English</h4>
+                    <meter min="0" max="100" value="70"></meter>
+                </div>
+                <div>
+                    <h4>German</h4>
+                    <meter min="0" max="100" value="20"></meter>
+                </div>
+                <div>
+                    <h4>Spanish</h4>
+                    <meter min="0" max="100" value="90"></meter>
+                </div>
+            </content>
+            <content>
+                <h2>Skills</h2>
+                <div>
+                    <h4>HTML</h4>
+                    <meter min="0" max="100" value="70"></meter>
+                </div>
+                <div>
+                    <h4>JS</h4>
+                    <meter min="0" max="100" value="20"></meter>
+                </div>
+                <div>
+                    <h4>CSS</h4>
+                    <meter min="0" max="100" value="90"></meter>
+                </div>
+            </content>
+            <content>
+                <h2>Online Info</h2>
+                <span>
+                    <i class="bi bi-facebook bg-blue size-md"></i>
+                    <span>/hloom</span>
+                </span>
+                <span>
+                    <i class="bi bi-google bg-red size-md"></i>
+                    <span>/hloom</span>
+                </span>
+            </content>
+        </aside>
+        <div class="other-info">
+            <section>
+                <div class="bg-title">
+                    <h1>Achievements</h1>
+                </div>
+                <div>
+                    <h2><pre>2010  Lorem Project</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2><pre>2012  Vivamus Project</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2><pre>2015  Nunc Project</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+            <section>
+                <div class="bg-title">
+                    <h1>Education</h1>
+                </div>
+                <div>
+                    <h2><pre>1997 - 2001  ABC School</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2><pre>2001 - 2004  Ohio University</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2><pre>2004 - 2006  ABC Studies</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+            <section>
+                <div class="bg-title">
+                    <h1>Work Experience</h1>
+                </div>
+                <div>
+                    <h2><pre>2010 - 2013  ABC Companies</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2><pre>2013 - 2015  Zoom Company</pre></h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section style="display: block;">
+            <h2>Video about me</h2>
+            <video id="vidMe" width="700" height="500" onclick="togglemedia(this)" muted autoplay>
+                <source src="sounds/sample.mp4">
+                Your browser does not support this media type
+            </video>
+        </section>
+        <section style="display: flex;">
+            <div style="background-color: red; width: 33%; height: 40px;"></div>
+            <div style="background-color: orange; width: 33%; height: 40px;"></div>
+            <div style="background-color: cyan; width: 33%; height: 40px;"></div>
+        </section>
+    </footer>
+
+    <script>
+        function togglemedia(element) {
+            if (element.paused) {
+                element.play()
+            } else {
+                element.pause()
+            }
+        }
+    </script>
+</body>
+</html>
