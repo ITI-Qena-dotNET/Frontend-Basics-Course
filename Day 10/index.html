@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <title>Day 10 Task</title>
+    <style>
+        .list-unstyled {
+            list-style-type: none;
+        }
+
+        .list-inline {
+            display: inline;
+            transition-property: all;
+        }
+
+        .list-inline :hover {
+            background-color: green;
+            color: white;
+        }
+
+        .a-style {
+            padding: 10px;
+            background-color: gray;
+            color: black;
+            transition: all;
+            transition-duration: 0.7s;
+        }
+
+        .a-style :hover {
+            color: white;
+        }
+
+        .div-spacing-v {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #web-font {
+            font-family: 'Abel', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'my-server-font';
+            src: url('fonts/Pacifico-Regular.ttf');
+        }
+
+        #server-font {
+            font-family: 'my-server-font', sans-serif;
+        }
+
+        .img-circle {
+            display: inline;
+            opacity: 100%;
+            border-radius: 50%;
+        }   
+
+        #bg-grey {
+            display: inline-block;
+            border-radius: 40px 40px;
+            background-color: grey;
+            width: 145px;
+        }
+
+        .image-zoom-out {
+            box-shadow: 10px 10px 10px;
+            transition: all;
+            transition-duration: 1.5s;
+        }
+
+        .image-zoom-out:hover {
+            transform: scale(1.2);
+            box-shadow: 20px 15px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-spacing-v">
+        <h3>Nav bar</h3>
+        <ul class="list-unstyled">
+            <li class="list-inline">
+                <a class="a-style">
+                    <i class="fa-solid fa-home"></i>
+                </a>
+            </li>
+            <li class="list-inline">
+                <a class="a-style">
+                    <i class="fa-solid fa-search"></i>
+                </a>
+            </li>
+            <li class="list-inline">
+                <a class="a-style">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li class="list-inline">
+                <a class="a-style">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </li>
+            <li class="list-inline">
+                <a class="a-style">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="div-spacing-v">
+        <h2 id="web-font">This text is rendered using Google Web Fonts</h2>
+        <h2 id="server-font">This text is rendered using Server Fonts</h2>
+    </div>
+
+    <div c-lass="div-spacing-v">
+        <a href="cv.html">Problem 4</a>
+    </div>
+
+    <div class="div-spacing-v">
+        <div id="bg-grey">
+            <img class="img-circle" src="images/avatar.png" width="50" height="50">
+            <span id="inner" style="align-items: center;">
+                Jane Row
+                <a id="closeButton">
+                    <i class="fa-solid fa-close"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <div class="div-spacing-v">
+        <img src="images/nature.bmp" class="image-zoom-out" width="100" height="100" />
+        <img src="images/nature.bmp" class="image-zoom-out" width="100" height="100" />
+        <img src="images/nature.bmp" class="image-zoom-out" width="100" height="100" />
+        <img src="images/nature.bmp" class="image-zoom-out" width="100" height="100" />
+    </div>
+
+    <script>
+        document.getElementById("closeButton")
+            .addEventListener('click', function (event) {
+                console.log(event)
+                document.getElementById("bg-grey").style.width = '0px'
+                document.getElementById("bg-grey").style.opacity = '0%'
+                document.getElementById("inner").toggleAttribute("hidden")
+            })
+
+        document.getElementsByClassName("img-circle")[0]
+            .addEventListener('click', function (event) {
+                console.log(event)
+                document.getElementById("bg-grey").style.width = '145px'
+                document.getElementById("bg-grey").style.opacity = '100%'
+                document.getElementById("inner").toggleAttribute("hidden")
+            })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        .header-style {
+            background-color: orange;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-skills {
+            float: left;
+            display: inline;
+            margin-left: 400px;
+            margin-right: 100px;
+        }
+
+        .other-info {
+            float: left;
+            display: block;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .bg-blue {
+            color: blue;
+        }
+
+        .bg-red {
+            color: red;
+        }
+
+        .size-md {
+            font-size: 1.5rem;
+        }
+
+        .bg-title {
+            background-color: orange;
+            padding: 20px;
+        }
+
+        @font-face {
+            font-family: 'my-server-font';
+            src: url('fonts/Pacifico-Regular.ttf');
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Abel', sans-serif;
+        }
+
+        span {
+            font-family: 'my-server-font', sans-serif;
+        }
+
+        pre {
+            font-family: 'Abel', sans-serif;
+        }
+
+        p {
+            font-family: 'my-server-font', sans-serif;
+        }
+
+        .circle-progress-parent {
+            background-color: red;
+            width: 90px;
+            height: 90px;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .circle-progress-child {
+            background-color: white;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 65%;
+            left: 68%;
+            margin: -50px 0 0 -50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-style">
+        <img src="images/avatar.png" width="150" height="150px">
+        <div class="float-right">
+            <h1>Andrew Hloom</h1>
+            <h3>Profession</h3>
+        </div>
+    </header>
+    <main style="display: flex;">
+        <aside class="info-skills">
+            <content>
+                <h2 onclick="togglemedia(document.getElementById('ring'))">Contact</h2>
+                <audio hidden id="ring">
+                    <source src="sounds/ring.mp3">
+                </audio>
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <span>123 Park Avenue, Michigan, MI</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>123 456 789</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <span><time datetime="1999-08-16">16/8/1999</time></span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@hloom.com</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-link"></i>
+                    <span>www.hloom.com</span>
+                </div>
+            </content>
+            <content>
+                <h2 class="web-font">Languages</h2>
+                <div>
+                    <h4>English</h4>
+                    <meter min="0" max="100" value="70"></meter>
+                </div>
+                <div>
+                    <h4>German</h4>
+                    <meter min="0" max="100" value="20"></meter>
+                </div>
+                <div>
+                    <h4>Spanish</h4>
+                    <meter min="0" max="100" value="90"></meter>
+                </div>
+            </content>
+            <content>
+                <h2>Skills</h2>
+                <div>
+                    <h4>HTML</h4>
+                    <div class="circle-progress-parent">
+                        <div class="circle-progress-child">
+                            <p>50%</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>JS</h4>
+                    <meter min="0" max="100" value="20"></meter>
+                </div>
+                <div>
+                    <h4>CSS</h4>
+                    <meter min="0" max="100" value="90"></meter>
+                </div>
+            </content>
+            <content>
+                <h2>Online Info</h2>
+                <span>
+                    <i class="fa-brands fa-facebook bg-blue size-md"></i>
+                    <span>/hloom</span>
+                </span>
+                <span>
+                    <i class="fa-brands fa-google bg-red size-md"></i>
+                    <span>/hloom</span>
+                </span>
+            </content>
+        </aside>
+        <div class="other-info">
+            <section>
+                <div class="bg-title">
+                    <h1>Achievements</h1>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2010  Lorem Project</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2012  Vivamus Project</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2015  Nunc Project</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+            <section>
+                <div class="bg-title">
+                    <h1>Education</h1>
+                </div>
+                <div>
+                    <h2>
+                        <pre>1997 - 2001  ABC School</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2001 - 2004  Ohio University</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2004 - 2006  ABC Studies</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+            <section>
+                <div class="bg-title">
+                    <h1>Work Experience</h1>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2010 - 2013  ABC Companies</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+                <div>
+                    <h2>
+                        <pre>2013 - 2015  Zoom Company</pre>
+                    </h2>
+                    <p>Some Text here</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section style="display: block;">
+            <h2>Video about me</h2>
+            <video id="vidMe" width="700" height="500" onclick="togglemedia(this)" muted autoplay>
+                <source src="sounds/sample.mp4">
+                Your browser does not support this media type
+            </video>
+        </section>
+        <section style="display: flex;">
+            <div style="background-color: red; width: 33%; height: 40px;"></div>
+            <div style="background-color: orange; width: 33%; height: 40px;"></div>
+            <div style="background-color: cyan; width: 33%; height: 40px;"></div>
+        </section>
+    </footer>
+
+    <script>
+        function togglemedia(element) {
+            if (element.paused) {
+                element.play()
+            } else {
+                element.pause()
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
